@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405695121984",
+    "project_id": "authentication-5350b",
+    "storage_bucket": "authentication-5350b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405695121984:android:8e9f7d81d49f97ad8aeda5",
+        "android_client_info": {
+          "package_name": "com.example.signup_signin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0u4p1BhOz1-V9coEQMNB3iNFULXmM0B8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
