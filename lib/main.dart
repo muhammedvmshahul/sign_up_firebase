@@ -10,12 +10,10 @@ import 'package:signup_signin/provider/themeProvider.dart';
 import 'package:signup_signin/view/homepage.dart';
 import 'package:signup_signin/view/loginpage.dart';
 
-
 void main() async {
+  print('hello');
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => Authprovider()),
     ChangeNotifierProvider(create: (context) => ThemeProvider()),
@@ -46,8 +44,12 @@ class AuthWrapper extends StatelessWidget {
     return StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapShot) {
-          if(snapShot.connectionState == ConnectionState.waiting){
-            const Center(child: CircularProgressIndicator(color: Colors.red,),);
+          if (snapShot.connectionState == ConnectionState.waiting) {
+            const Center(
+              child: CircularProgressIndicator(
+                color: Colors.red,
+              ),
+            );
           }
           if (snapShot.hasData) {
             return const Homepage();
